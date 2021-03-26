@@ -1,0 +1,8 @@
+name: MCron
+version: ${project.version}
+main: io.github.gk0wk.mcron.MCron
+api-version: 1.14
+load: STARTUP
+authors: [ Gk0Wk ]
+description: Command scheduler. Just works like cron on Linux.
+website: https://gk0wk.github.io/
