@@ -21,7 +21,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-          server-id: city.newnan.NewNanPlus # Value of the distributionManagement/repository/id field of the pom.xml
+          server-id: io.github.gk0wk.mcron # Value of the distributionManagement/repository/id field of the pom.xml
           settings-path: ${{ github.workspace }} # location for the settings.xml file
 
       - name: Restore Maven cache
