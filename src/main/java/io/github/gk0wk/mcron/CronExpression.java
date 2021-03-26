@@ -41,7 +41,7 @@ public class CronExpression {
         put("sun", 7); put("sunday",    7); put("0", 7); put("7", 7);
     }};
 
-    private static ZoneOffset localTimezoneOffset = ZoneOffset.of("+8");
+    private static ZoneOffset localTimezoneOffset = ZoneOffset.of("Z");
 
     private final int[] secondList;
     private final int[] minuteList;
@@ -627,7 +627,7 @@ public class CronExpression {
      * 重新设置时区
      * @param offsetId 时区ID
      */
-    public void setTimeZoneOffset(String offsetId) {
+    public static void setTimeZoneOffset(String offsetId) {
         localTimezoneOffset = ZoneOffset.of(offsetId);
     }
 

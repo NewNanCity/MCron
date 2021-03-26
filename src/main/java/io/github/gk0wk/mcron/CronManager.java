@@ -35,11 +35,16 @@ public class CronManager implements Terminable {
 
     protected void reload() {
         try {
+            // 清空
             this.tasks.clear();
             this.cacheInTimeTasks.clear();
             this.inTimeTasks.clear();
             this.outdatedTasks.clear();
 
+            // 设置时区
+            CronExpression.setTimeZoneOffset(MCron.getInstance().configManager.get("config.yml").getNode("timezone-offset").getString("Z"));
+
+            // 重载
             MCron.getInstance().configManager.get("config.yml").getNode("schedule-tasks").getChildrenMap().forEach((key, value) -> {
                 if (key instanceof String) {
                     List<String> commands = ConfigUtil.setListIfNull(value).getList(Object::toString);

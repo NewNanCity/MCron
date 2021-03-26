@@ -1,4 +1,17 @@
 version: ${project.version}
+# GMT time zone offset, supported format:
+# Z - for UTC
+# +h
+# +hh
+# +hh:mm
+# -hh:mm
+# +hhmm
+# -hhmm
+# +hh:mm:ss
+# -hh:mm:ss
+# +hhmmss
+# -hhmmss
+timezone-offset: '+8'
 on-server-ready: []
 # Example:
 #  - 'broadcast §aServer is ready, enjoy your day!'
