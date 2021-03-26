@@ -92,7 +92,7 @@ public final class MCron extends ExtendedJavaPlugin {
     protected void executeCommandsByConfig(Object... nodePath) {
         try {
             CommandSender sender = Bukkit.getConsoleSender();
-            ConfigUtil.setListIfNull(configManager.get("cron.yml").getNode(nodePath))
+            ConfigUtil.setListIfNull(configManager.get("config.yml").getNode(nodePath))
                     .getList(Object::toString).forEach(command -> {
                 messageManager.printf("$msg.execute$", command);
                 Bukkit.dispatchCommand(sender, command);
@@ -102,9 +102,7 @@ public final class MCron extends ExtendedJavaPlugin {
         }
     }
 
-    private void onServerStartup() {
-        executeCommandsByConfig("on-server-ready");
-    }
+    private void onServerStartup() { executeCommandsByConfig("on-server-ready"); }
 
     private void onPluginEnable(String pluginName) {
         executeCommandsByConfig("on-plugin-enable", pluginName);
