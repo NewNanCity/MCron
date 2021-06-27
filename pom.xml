@@ -6,7 +6,7 @@
 
     <groupId>io.github.gk0wk</groupId>
     <artifactId>MCron</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <name>MCron</name>
@@ -97,7 +97,7 @@
         <dependency>
             <groupId>com.github.NewNanCity</groupId>
             <artifactId>Violet</artifactId>
-            <version>1.0.5</version>
+            <version>1.0.7</version>
         </dependency>
     </dependencies>
 </project>
